@@ -1,0 +1,20 @@
+// Bootstrap Sass files
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+
+.jumbotron{
+    background-color: #ffffff;
+    border-top: 3px solid rgb(219, 219, 219);
+
+}
+.parent{
+    background-color: black;
+}
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
