@@ -1,0 +1,80 @@
+body{
+    font-family: 'Monserrat', sans-serif, 'Teko', 'Catamaran', 'Archivo Black';
+    
+}
+
+.background{
+    background-color: #000000;
+    
+}
+.bgimage{
+    background-image: url("../images/cnn.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.jumbotron{
+    background-color:black;
+    color: rgb(216, 216, 112);
+    text-align: center;
+    font-style: italic;
+    
+
+}
+
+.navbar{
+    margin-left: 2rem;
+    text-align: center;
+}
+
+.row {
+    margin-left: 0rem;
+}
+
+.formatLeft{
+    
+    border: green;
+    background-color: black;
+    padding: 35px;   
+}
+
+.formatCenter{
+    background-color: black;
+    border-right-width: 25px;
+    border-right-color: #deb887;
+    border-left-width: 25px;
+    border-left-color: #deb887;
+    padding-top: 80px;
+    color: white;
+    text-align: center;
+   ;
+}
+
+.formatCenterRight{
+    background-color: black;
+    text-align: center;
+    color: 
+}
+
+.formatRight{
+    background-color: black;
+    padding: 25px;
+    color: gold;
+    
+}
+
+.gold{
+    color: gold;
+    text-align: center;
+
+}
+.white{
+    color: grey;
+}
+
+.crystal-image {
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+  
+  }
