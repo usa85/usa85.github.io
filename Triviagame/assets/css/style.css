@@ -1,0 +1,28 @@
+
+body {
+    background-image: "assets/images/Me.png";
+    background-color: grey;
+}
+
+.container {
+    position: relative;   
+    margin: 0 auto;
+}
+
+.container img {vertical-align: top;}
+
+.container .content {
+    
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+    
+    width: 100%;
+
+}
+.jumbotron {
+    padding: 0rem;
+}
+
+.txtcolor1 {
+    color: blue;
+}
