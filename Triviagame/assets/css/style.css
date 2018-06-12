@@ -9,7 +9,7 @@ body {
     margin: 0 auto;
 }
 
-.container img {vertical-align: top;}
+.container img {vertical-align: top;} /*new comment */
 
 .container .content {
     
@@ -66,4 +66,5 @@ li {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display:         flex;
+    display:  -flex;
+}
