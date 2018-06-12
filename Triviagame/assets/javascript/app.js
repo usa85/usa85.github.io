@@ -17,7 +17,8 @@ var ListOfQuestions = {
 
 // We need a function to read and display the question and the answers in a card, b
 // 
- console.log(ListOfQuestions.Question);
+
+console.log(ListOfQuestions.Question);
  console.log(ListOfQuestions.CorrectAnswer);
  console.log(ListOfQuestions.FullQuestion);
  document.getElementById("FullQuestion").innerHTML = ListOfQuestions.FullQuestion();
