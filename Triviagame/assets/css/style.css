@@ -9,7 +9,9 @@ body {
     margin: 0 auto;
 }
 
-.container img {vertical-align: top;} /*new comment */
+.container img {
+    vertical-align: top;
+} /*new comment */
 
 .container .content {
     
@@ -62,9 +64,3 @@ li {
     display: inline;
 }
 
-.row-eq-height {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display:  -flex;
-}
