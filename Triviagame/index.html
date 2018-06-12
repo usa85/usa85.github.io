@@ -9,14 +9,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
     
     <title>Triviagame</title>
   </head>
   <body>
       <div class="container">
         <!--<img class="bg-image" src="assets/images/Me.png">-->
-        <div class="jumbotron bgimgage jumbotr on-fluid">
+        <div class="jumbotron bgimgage jumbotron-fluid">
           
             <img src="assets/images/Trivia.jpg" style="width:100%">
          
@@ -46,12 +46,13 @@
         </div>
       </div>
       
-      <div class="row">
+      <div class="row row-eq-height">
         
-            <div class="col- col-sm col-md-3 col-lg-3 col-xl-3 ">
-               <p>Once you answer the first question, you have xxx seconds to complete the questionaire</p>
-              </div>
-              <div class="col- col-sm col-md-6 col-lg-6 col-xl-6">
+           <div class="col- col-sm col-md-3 col-lg-3 col-xl-3 LeftBackground">
+               <p>Once you answer the first question, you have 120 seconds to complete the questionaire.</p>
+               <p>Answering the first question triggers the timer, and moves to the next question, and so on.</p>
+              <p>There are i questions.</p></div>
+              <div class="col- col-sm col-md-6 col-lg-6 col-xl-6 GameBackground">
                   <h2>This is a great question</h2>
                   <p id="demo"></p>
                   <p id="CorrectAnswer"></p>
@@ -59,10 +60,12 @@
                   <p id="FullQuestion"></p>
                 
               </div>
-              <div class="col- col-sm col-md-3 col-lg-3 col-xl-3">
-                  <p id="ComputerScore">
+              <div class="col- col-sm col-md-3 col-lg-3 col-xl-3 RightBackground">
+                  <p id="TimeRemaining">Time Remaining: </p>
+                  <p id="ComputerScore">Incorrect Answers:
                   </p>
-                  <p id="PlayerScore"></p>
+                  <p id="PlayerScore">Correct Answers:</p>
+                  <p id="Unanswered">Unanswered: </p>
               </div>
           </div>
         

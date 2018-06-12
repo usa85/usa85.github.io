@@ -1,6 +1,6 @@
 
 body {
-    background-image: "assets/images/Me.png";
+    background-image: url("../images/Background.jpg");
     background-color: grey;
 }
 
@@ -26,3 +26,44 @@ body {
 .txtcolor1 {
     color: blue;
 }
+
+.GameBackground{
+    background-color: #deb887;
+    opacity: 0.8;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+   
+}
+
+.LeftBackground{
+    background-color: Grey;
+    opacity: 0.7;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+    color: yellow;
+   
+}
+
+.RightBackground{
+    background-color: Grey;
+    opacity: 0.7;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+}
+
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
