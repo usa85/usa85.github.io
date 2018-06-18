@@ -20,16 +20,16 @@ var clockRunning = false;
 //  Our stopwatch object.
 var stopwatch = {
 
-  time: 0,
+  time: 120,
   lap: 1,
 
   reset: function() {
 
-    stopwatch.time = 0;
+    stopwatch.time = 120;
     stopwatch.lap = 1;
 
     //  TODO: Change the "display" div to "00:00."
-    $("#display").html("00:00");
+    $("#display").html("2:00");
     $("#laps").html("");
 
   },
@@ -64,7 +64,7 @@ var stopwatch = {
     //  TODO: Increment lap by 1. Remember, we can't use "this" here.
   },
   count: function() {
-      stopwatch.time++
+      stopwatch.time--
       var someTime = stopwatch.timeConverter(stopwatch.time);
       $("#display").html(someTime);
 

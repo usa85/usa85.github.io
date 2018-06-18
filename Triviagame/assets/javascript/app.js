@@ -26,3 +26,5 @@ console.log(ListOfQuestions.Question);
  //We need an array of questions which includes all question from 1 to n
  //We need a loop that move from questions to questions and change page, and record the right answer
  //We need a counter score on the right column.  Computer Score and Player Score.
+
+ 
