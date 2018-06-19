@@ -11,7 +11,7 @@
 
     <!-- jQuery library -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
 
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
@@ -71,9 +71,11 @@
 
     
    
-    <div class="row" style="margin:0;">
-        <div class="col-sm-8" style="background-color:lavender; margin:0;">
-            <div id="animals-view"></div>
+    <div class="row" style=" margin:0;">
+        <div class="col-sm-8" style="background-color: lavender; margin:0;">
+            <div id="movies-view">
+
+            </div>
         </div>
 
         <div class="col-sm-4" style="background-color:black; margin:0;">
@@ -83,14 +85,14 @@
             <br>
 
             <!-- Button triggers new movie to be added -->
-            <input id="add-movie" type="submit" value="Add An Animal"">
+            <input id="add-movie" type="submit" value="Add An Animal">
             </form>
         
         </div>
     </div>
 
 
-            
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
             <script type="text/javascript">
             // Initial array of movies
             var movies = ["cat", "dog", "Hamster", "Chicken"];
@@ -100,13 +102,16 @@
 
                 var movie = $(this).attr("data-name");
                 var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
-                // queryURL = "https://api.giphy.com/v1/gifs/search?api_key=7rnqxdKoub8HjqH8eLWCwHnibgeK8s14&q" +Animals+ "&limit=25&offset=0&rating=G&lang=en"
+                //var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + movie + "&api_key=dc6zaTOxFJmzC&limit=10";
 
                 // Creating an AJAX call for the specific movie button being clicked
                 $.ajax({
                 url: queryURL,
                 method: "GET"
                 }).then(function(response) {
+                    
+                    console.log(queryURL);
+                    console.log(response);
 
                 // Creating a div to hold the movie
                 var movieDiv = $("<div class='movie'>");
@@ -118,25 +123,7 @@
                 var pOne = $("<p>").text("Rating: " + rating);
 
                 // Displaying the rating
-                movieDiv.append(pOne);
-
-                // Storing the release year
-                var released = response.Released;
-
-                // Creating an element to hold the release year
-                var pTwo = $("<p>").text("Released: " + released);
-
-                // Displaying the release year
-                movieDiv.append(pTwo);
-
-                // Storing the plot
-                var plot = response.Plot;
-
-                // Creating an element to hold the plot
-                var pThree = $("<p>").text("Plot: " + plot);
-
-                // Appending the plot
-                movieDiv.append(pThree);
+                movieDiv.append(pOne);                
 
                 // Retrieving the URL for the image
                 var imgURL = response.Poster;
@@ -146,9 +133,12 @@
 
                 // Appending the image
                 movieDiv.append(image);
+                //animalDiv.append(animal);
 
                 // Putting the entire movie above the previous movies
-                $("#animals-view").append(movieDiv);
+                // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
+                //$("#gifs-appear-here").prepend(animalDiv);
+                $("#movies-view").append(movieDiv);
                 });
 
             }
@@ -158,7 +148,7 @@
 
                 // Deleting the movies prior to adding new movies
                 // (this is necessary otherwise you will have repeat buttons)
-                $("#animals-view").empty();
+                $("#buttons-view").empty();
 
                 // Looping through the array of movies
                 for (var i = 0; i < movies.length; i++) {
