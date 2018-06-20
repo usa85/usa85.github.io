@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <!-- WineLocation front page-->
 <head>
   <meta charset="utf-8">
   <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Map - Tastic</title>
+  <title>The A-Team</title>
     <!--    Wine-Tastic index.html Page Overall Description
             Page displays Retional Google Maps and Geocoded Address with the possibility to add a bunch of locations on it.  
             Page relies on Google map API with key  Info regarding this API can be found on GoogleAPIReadMe.txt file in Document Folder
@@ -79,7 +79,7 @@
                                   <a class="nav-link " href="https://usa85.github.io/Contact.html">Contact</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link " href="https://usa85.github.io/maptastic/aTeam.html">A - Team</a>
+                                <a class="nav-link " href="https://usa85.github.io/maptastic/index.html">Back</a>
                             </li>
                           </ul>
                       </div>
@@ -91,7 +91,7 @@
         <div class="jumbotron jumbotron-fluid" style="margin:0; padding-top: 10px; background-color:blanchedalmond;">
 
             
-                    <h3 style="padding-left: 20px; color: blue;">Select An Existing Location OR Create a New Location</h3>
+                    <h3 style="padding-left: 20px; color: blue;">Select One of the Team Member On the Global Map</h3>
                     <hr>
              <div id="buttons-view" style="padding-top: 0%;"></div>
                     
@@ -120,7 +120,10 @@
 
                 <div class="col-sm-4" style="background-color:bisque; margin:0;">
                         <div id="info-view">
-                            <h2>Info goes here</h2>
+                            <h2>Our International Team</h2>
+                            <hr>
+                            <p>Our team is clearly International.  Abhinav is from India. Gamme is from ???.  Pierre is from France.  Tashi is from Tibet.   </p>
+                            
                         </div>
 
                 </div>
@@ -130,13 +133,34 @@
         // script loads the map in the id #map-view and position it as a word map.
              // Initialize and add the map
              function initMap() {
-                              // The location of Uluru
-                              var uluru = {lat:46.932008, lng:2.625380};
+                              // The location of Uluru (Pierre)
+
+                             // var uluru = [
+                              //      pierre {lat:46.932008, lng:2.625380},
+                              //      abhinav{lat:23.546223, lng:78.356123},
+                               //     Tashi {lat: 44.595297 , lng: -92.814127 },
+                              //      Gamme { lat:31.760830, lng: 88.246217},
+                               //     Minn {lat: 44.0333 , lng: -93.3153}
+                             // ]
+                              var   pierre =    {lat:46.932008,     lng:2.625380};
+                                    abhinav=    {lat:23.546223,     lng:78.356123};
+                                    tashi =     {lat: 44.595297 ,   lng: -92.814127};
+                                    gamme =     {lat:31.760830,     lng: 88.246217};
+                                    minn =      {lat: 48.0333 ,     lng: -98.3153};
+
+                              
                               // The map, centered at Uluru
                               var map = new google.maps.Map(
-                                  document.getElementById('map'), {zoom: 4, center: uluru});
+                                  document.getElementById('map'), {zoom: 2, center: pierre});
                               // The marker, positioned at Uluru
-                              var marker = new google.maps.Marker({position: uluru, map: map});
+                              var marker = new google.maps.Marker({position: pierre, map: map});
+                              var marker = new google.maps.Marker({position: abhinav, map: map});
+                              var marker = new google.maps.Marker({position: tashi, map: map});
+                              var marker = new google.maps.Marker({position: gamme, map: map});
+                              var marker = new google.maps.Marker({position: minn, map: map});
+                               
+
+
                             } 
         // script load buttons
         </script>
