@@ -40,6 +40,7 @@
            #map {
              height: 400px;  /* The height is 400 pixels */
              width: 100%;  /* The width is the width of the web page */
+             background-color:blanchedalmond;
             }
             .navbar-toggler-icon{
                             background-image:url(assets/images/burger.png);           
@@ -93,15 +94,19 @@
             
                     <h3 style="padding-left: 20px; color: blue;">Select An Existing Location OR Create a New Location</h3>
                     <hr>
-             <div id="buttons-view" style="padding-top: 0%;"></div>
+             <div id="buttons-view" style="padding-top: 0%; padding-left:5%"><p>list of buttons activating markers goes here!</p>
+
+
+             </div>
                     
             <div>    
-                <form id="locations-form" style="padding-left:60%">
+                <form id="location-form" style="padding-left:60%">
                     <label for="locations-input" style="color:blue;">Add a Location:</label>
                     <input type="text" id="location-input">
         
                     <!-- Button triggers new movie to be added -->
                     <input id="add-locations" type="submit" value="Add A Location">
+    
                 </form>
             </div> 
             
@@ -109,8 +114,8 @@
         </div>
 
         <div class="row" style="margin:0">
-                <div class="col-sm-8" style="background-color: lavender; margin:0;">
-                        <div id="map">
+                <div class="col-sm-8" style="background-color:blanchedalmond; margin-bottom:0px" >
+                        <div id="map" style>
                     
                            
                                 
@@ -121,6 +126,7 @@
                 <div class="col-sm-4" style="background-color:bisque; margin:0;">
                         <div id="info-view">
                             <h2>Info goes here</h2>
+                            <p>This is where information about one marker is displayed.</p>
                         </div>
 
                 </div>
@@ -141,13 +147,13 @@
         // script load buttons
         </script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script>
         
-            var locations = ["France", "Germany", "England", "Australia"];
+      
+        <script type="text/javascript">
+            var locationList = ["France", "Germany", "England", "Australia"];
 
             // Function for displaying movie data
-            function renderButtons() {
+            function renderButtons() 
 
                 // Deleting the movies prior to adding new movies
                 // (this is necessary otherwise you will have repeat buttons)
@@ -162,16 +168,37 @@
                 // Adding a class of movie-btn to our button
                 a.addClass("location-btn");
                 // Adding a data-attribute
-                a.attr("data-name", locations[i]);
+                a.attr("data-name", locationList[i]);
                 // Providing the initial button text
-                a.text(locations[i]);
+                a.text(locationList[i]);
                 // Adding the button to the buttons-view div
                 $("#buttons-view").append(a);
                 }
+
+                 // This function handles events where a movie button is clicked
+                 $("#add-location").on("click", function(event) {
+                event.preventDefault();
+                // This line grabs the input from the textbox
+                var locationList = $("#location-input").val().trim();
+
+                // Adding movie from the textbox to our array
+                locationList.push(location);
+
+                // Calling renderButtons which handles the processing of our movie array
+                renderButtons();
+                 });
+
+            // Adding a click event listener to all elements with a class of "movie-btn"
+            $(document).on("click", ".location-btn", displayLocationInfo);
+
+            // Calling the renderButtons function to display the intial buttons
+            renderButtons();
+          
         </script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfHquEEPHJDwuOWeK3pgkCpWAk2Q40p9E&callback=initMap"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script></script>
         
