@@ -145,55 +145,54 @@
                               var marker = new google.maps.Marker({position: uluru, map: map});
                             } 
         // script load buttons
-        </script>
-
-        
-      
-        <script type="text/javascript">
+       
             var locationList = ["France", "Germany", "England", "Australia"];
 
             // Function for displaying movie data
-            function renderButtons() 
+            function renderButtons() {
 
-                // Deleting the movies prior to adding new movies
-                // (this is necessary otherwise you will have repeat buttons)
-                $("#buttons-view").empty();
+                                            // Deleting the movies prior to adding new movies
+                                            // (this is necessary otherwise you will have repeat buttons)
+                                            $("#buttons-view").empty();
 
-                // Looping through the array of movies
-                for (var i = 0; i < locations.length; i++) {
+                                            // Looping through the array of movies
+                                            for (var i = 0; i < locationList.length; i++) {
 
-                // Then dynamicaly generating buttons for each movie in the array
-                // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
-                var a = $("<button>");
-                // Adding a class of movie-btn to our button
-                a.addClass("location-btn");
-                // Adding a data-attribute
-                a.attr("data-name", locationList[i]);
-                // Providing the initial button text
-                a.text(locationList[i]);
-                // Adding the button to the buttons-view div
-                $("#buttons-view").append(a);
-                }
+                                            // Then dynamicaly generating buttons for each movie in the array
+                                            // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
+                                            var a = $("<button>");
+                                            // Adding a class of movie-btn to our button
+                                            a.addClass("location-btn");
+                                            // Adding a data-attribute
+                                            a.attr("data-name", locationList[i]);
+                                            // Providing the initial button text
+                                            a.text(locationList[i]);
+                                            // Adding the button to the buttons-view div
+                                            $("#buttons-view").append(a);
+                                                                                        }
+                                        
 
-                 // This function handles events where a movie button is clicked
-                 $("#add-location").on("click", function(event) {
-                event.preventDefault();
-                // This line grabs the input from the textbox
-                var locationList = $("#location-input").val().trim();
+                                            // This function handles events where a movie button is clicked
+                                            $("#add-location").on("click", function(event) {
+                                            event.preventDefault();
+                                            // This line grabs the input from the textbox
+                                            var location = $("#location-input").val().trim();
 
-                // Adding movie from the textbox to our array
-                locationList.push(location);
+                                            // Adding movie from the textbox to our array
+                                            locationList.push(location);
 
-                // Calling renderButtons which handles the processing of our movie array
-                renderButtons();
-                 });
+                                            // Calling renderButtons which handles the processing of our movie array
+                                            renderButtons();
+                                                                                            }
+                                                                                        );
 
-            // Adding a click event listener to all elements with a class of "movie-btn"
-            $(document).on("click", ".location-btn", displayLocationInfo);
+                                            // Adding a click event listener to all elements with a class of "movie-btn"
+                                            $(document).on("click", ".location-btn", displayLocationInfo);
 
-            // Calling the renderButtons function to display the intial buttons
-            renderButtons();
-          
+                                            // Calling the renderButtons function to display the intial buttons
+                                            renderButtons();
+                                         }
+                                        
         </script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfHquEEPHJDwuOWeK3pgkCpWAk2Q40p9E&callback=initMap"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

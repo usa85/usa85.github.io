@@ -52,7 +52,7 @@
 
             ul {
             list-style-type: none;
-            margin: 0;S
+            margin: 0;
             padding: 0, 0, 0, 20px;
             overflow: hidden;
             background-color: none;
@@ -75,14 +75,22 @@
             li a:hover {
                 background-color:Brown;
             }
-            </style>
 
-          <!-- a:link {
+            .footer{
+                width: 1110px;
+                padding-top: 10px;
+                color:blanchedalmond;
+
+
+            }
+           
+</style><!--
+          a:link {
                 color: blanchedalmond; 
                 background-color: transparent; 
                 text-decoration: none;
             }
-
+ 
             a:visited {
                 color: grey;
                 background-color: transparent;
@@ -144,11 +152,12 @@
                     <hr>
              <div id="buttons-view" style="padding-top: 0%;">
                  <ul>
-                     <li><a href="pierre.txt"><img src="assets/images/pierre.png" alt="Pierre" style="width:50px; height:50px; border:0px;"><br>Pierre</a></li>
-                     <li><a href="https://placeholder.comt"><img src="http://via.placeholder.com/50x50" alt="Gamme" style="width:50px; height:50px; border:0px;"><br>Gamme</a></li>
-                     <li><a href="https://placeholder.com"><img src="http://via.placeholder.com/50x50" alt="Tashi" style="width:50px; height:50px; border:0px;"><br>Tashi</a></li>
-                     <li><a href="https://placeholder.com"><img src="http://via.placeholder.com/50x50" alt="Abhiva" style="width:50px; height:50px; border:0px;"><br>Abhiva</a></li>
-                     <li><a href="https://placeholder.com"><img src="http://via.placeholder.com/50x50" alt="Minnesota" style="width:50px; height:50px; border:0px;"><br>Minnesota</a></li>
+                    <li><a href="https://placeholder.com"><img src="http://via.placeholder.com/50x50" alt="Abhiva" style="width:50px; height:50px; border:0px;"><br>Abhiva</a></li>
+                    <li><a href="https://placeholder.comt"><img src="http://via.placeholder.com/50x50" alt="Gamme" style="width:50px; height:50px; border:0px;"><br>Gamme</a></li>
+                     
+                    <li><a href="pierre.txt"><img src="assets/images/pierre.png" alt="Pierre" style="width:50px; height:50px; border:0px;"><br>Pierre</a></li>
+                    <li><a href="https://placeholder.com"><img src="http://via.placeholder.com/50x50" alt="Tashi" style="width:50px; height:50px; border:0px;"><br>Tashi</a></li>
+                    <li><a href="https://placeholder.com"><img src="assets/images/mnseal.png" alt="Minnesota" style="width:50px; height:50px; border:0px;"><br>Minnesota</a></li>
                 </ul>
             </div>
                     
@@ -168,9 +177,7 @@
         <div class="row" style="margin:0">
                 <div class="col-sm-8" style="background-color: lavender; margin:0;">
                         <div id="map">
-                    
-                           
-                                
+                             
                         </div>
 
                 </div> 
@@ -180,20 +187,30 @@
                             <h3 style="padding-top:20px;">Our Team</h3>
                             <hr>
                             <p>Our team is clearly International:</p>
+
                             <ul>
                                 <li>Abhinav is from India.</li>
                                 <li>Gamme is from a great country.</li>
                                 <li>Pierre is from France</li>
                                 <li>Abhiva is from India</li>
                             </ul>
+
                             <p></p>
-                            <p>That makes us very special!</p>
+
+                            <p>making our team very special!</p>
                             
                         </div>
 
                 </div>
-        </div>
-
+       
+                <div class="row" style="margin:0; background-color:brown;">
+                    <div class="col-sm-12 col-md-12 " >
+                    <div class="card-text text-sm-center text-md-center  ml-auto">
+                            <p class="footer">@2018 PJC</p>
+                    </div>
+                </div>
+            </div>
+ </div>
         <script type="text/javascript">
         // script loads the map in the id #map-view and position it as a word map.
              // Initialize and add the map
@@ -238,25 +255,26 @@
             // Function for displaying movie data
             function renderButtons() {
 
-                // Deleting the movies prior to adding new movies
-                // (this is necessary otherwise you will have repeat buttons)
-                $("#buttons-view").empty();
+                                        // Deleting the movies prior to adding new movies
+                                        // (this is necessary otherwise you will have repeat buttons)
+                                        $("#buttons-view").empty();
 
-                // Looping through the array of movies
-                for (var i = 0; i < locations.length; i++) {
+                                        // Looping through the array of movies
+                                            for (var i = 0; i < locations.length; i++) {
 
-                // Then dynamicaly generating buttons for each movie in the array
-                // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
-                var a = $("<button>");
-                // Adding a class of movie-btn to our button
-                a.addClass("location-btn");
-                // Adding a data-attribute
-                a.attr("data-name", locations[i]);
-                // Providing the initial button text
-                a.text(locations[i]);
-                // Adding the button to the buttons-view div
-                $("#buttons-view").append(a);
-                }
+                                            // Then dynamicaly generating buttons for each movie in the array
+                                            // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
+                                            var a = $("<button>");
+                                            // Adding a class of movie-btn to our button
+                                            a.addClass("location-btn");
+                                            // Adding a data-attribute
+                                            a.attr("data-name", locations[i]);
+                                            // Providing the initial button text
+                                            a.text(locations[i]);
+                                            // Adding the button to the buttons-view div
+                                            $("#buttons-view").append(a);}
+                                     }
+        
         </script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfHquEEPHJDwuOWeK3pgkCpWAk2Q40p9E&callback=initMap"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
