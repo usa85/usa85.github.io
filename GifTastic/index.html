@@ -13,11 +13,7 @@
 
     
 
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    
 
 
   <style type="text/css">
@@ -32,6 +28,18 @@
         background-color:bisque;
     }
 
+    /* Set the size of the div element that contains the map */
+    #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+    }
+    .navbar-toggler-icon{
+                    background-image:url(assets/images/burger.png);           
+    }
+
+            
+         </style>
+
     
   </style>
 </head>
@@ -39,7 +47,6 @@
 <body>
 
   <div class="container" style="padding:0;">
-    <div class="header" style="background-color:black; color: white; margin:0; padding:10px; text-align:center;">
         <nav class="navbar navbar-expand-lg navbar-bg">
                
                 <aside id="MyName"><h1>Gif-Tastic</h1></aside>
@@ -63,8 +70,8 @@
                     </ul>
                 </div>
             </nav>
-    </div>
-    <!-- Movies will Get Dumped Dere -->
+    
+    
     
 
     <!-- Rendered Buttons will get Dumped Here  -->
@@ -73,7 +80,7 @@
             <div id="buttons-view" style="padding-top: 0%;"></div>
     </div>
 
-    
+    <!-- Movies will Get Dumped Dere -->
    
     <div class="row" style=" margin:0;">
         <div class="col-sm-8" style="background-color: lavender; margin:0;">
@@ -104,48 +111,49 @@
             // displayMovieInfo function re-renders the HTML to display the appropriate content
             function displayMovieInfo() {
 
-                var movie = $(this).attr("data-name");
-                var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
-                //var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + movie + "&api_key=dc6zaTOxFJmzC&limit=10";
+                                        var movie = $(this).attr("data-name");
+                                        var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
+                                        //var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + movie + "&api_key=dc6zaTOxFJmzC&limit=10";
 
-                // Creating an AJAX call for the specific movie button being clicked
-                $.ajax({
-                url: queryURL,
-                method: "GET"
-                }).then(function(response) {
-                    
-                    console.log(queryURL);
-                    console.log(response);
+                                        // Creating an AJAX call for the specific movie button being clicked
+                                        $.ajax({
+                                                url: queryURL,
+                                                method: "GET"
+                                                }).then(function(response) {
+                                            
+                                                                            console.log(queryURL);
+                                                                            console.log(response);
 
-                // Creating a div to hold the movie
-                var movieDiv = $("<div class='movie'>");
+                                                                            // Creating a div to hold the movie
+                                                                            var movieDiv = $("<div class='movie'>");
 
-                // Storing the rating data
-                var rating = response.Rated;
+                                                                            // Storing the rating data
+                                                                            var rating = response.Rated;
 
-                // Creating an element to have the rating displayed
-                var pOne = $("<p>").text("Rating: " + rating);
+                                                                            // Creating an element to have the rating displayed
+                                                                            var pOne = $("<p>").text("Rating: " + rating);
 
-                // Displaying the rating
-                movieDiv.append(pOne);                
+                                                                            // Displaying the rating
+                                                                            movieDiv.append(pOne);                
 
-                // Retrieving the URL for the image
-                var imgURL = response.Poster;
+                                                                            // Retrieving the URL for the image
+                                                                            var imgURL = response.Poster;
 
-                // Creating an element to hold the image
-                var image = $("<img>").attr("src", imgURL);
+                                                                            // Creating an element to hold the image
+                                                                            var image = $("<img>").attr("src", imgURL);
 
-                // Appending the image
-                movieDiv.append(image);
-                //animalDiv.append(animal);
+                                                                            // Appending the image
+                                                                            movieDiv.append(image);
+                                                                            //animalDiv.append(animal);
 
-                // Putting the entire movie above the previous movies
-                // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
-                //$("#gifs-appear-here").prepend(animalDiv);
-                $("#movies-view").append(movieDiv);
-                });
+                                                                            // Putting the entire movie above the previous movies
+                                                                            // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
+                                                                            //$("#gifs-appear-here").prepend(animalDiv);
+                                                                            $("#movies-view").append(movieDiv);
+                                                                            }
+                                                        );
 
-            }
+                                         };
 
             // Function for displaying movie data
             function renderButtons() {
@@ -189,7 +197,11 @@
 
             // Calling the renderButtons function to display the intial buttons
             renderButtons();
-            </script>   
+            </script> 
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+           
   </div>
 </body>
 
