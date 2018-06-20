@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <!-- WineLocation front page-->
 <head>
@@ -47,10 +47,59 @@
             
             body{
                 background-color: black;
+            
             }
 
-            
-         </style>
+            ul {
+            list-style-type: none;
+            margin: 0;S
+            padding: 0, 0, 0, 20px;
+            overflow: hidden;
+            background-color: none;
+            float: left;
+            }
+
+            li {
+                float: left;
+                
+            }
+
+            li a {
+                display: block;
+                
+                text-align: center;
+                padding: 16px;
+                text-decoration: none;
+            }
+
+            li a:hover {
+                background-color:Brown;
+            }
+            </style>
+
+          <!-- a:link {
+                color: blanchedalmond; 
+                background-color: transparent; 
+                text-decoration: none;
+            }
+
+            a:visited {
+                color: grey;
+                background-color: transparent;
+                text-decoration: none;
+            }
+
+            a:hover {   
+                color:burlywood;
+                background-color: transparent;
+                text-decoration: none;
+}
+
+            a:active {
+                color: green;
+                background-color: transparent;
+                text-decoration: none; 
+            </style>-->
 </head>
 <!-- content starts here -->
 
@@ -88,15 +137,23 @@
         
 
           <!-- Rendered Buttons will get Dumped Here  -->
-        <div class="jumbotron jumbotron-fluid" style="margin:0; padding-top: 10px; background-color:blanchedalmond;">
+        <div class="jumbotron jumbotron-fluid" style="margin:0; padding-top: 10px; background-color:blanchedalmond; border-bottom:20px ; -moz-border-bottom-colors: brown;">
 
             
                     <h3 style="padding-left: 20px; color: blue;">Select One of the Team Member On the Global Map</h3>
                     <hr>
-             <div id="buttons-view" style="padding-top: 0%;"></div>
+             <div id="buttons-view" style="padding-top: 0%;">
+                 <ul>
+                     <li><a href="pierre.txt"><img src="assets/images/pierre.png" alt="Pierre" style="width:50px; height:50px; border:0px;"><br>Pierre</a></li>
+                     <li><a href="gamme.txt"><img src="assets/images/gamme.jpg" alt="Gamme" style="width:50px; height:50px; border:0px;"><br>Gamme</a></li>
+                     <li><a href="tashi.txt"><img src="assets/images/tashi.jpg" alt="Tashi" style="width:50px; height:50px; border:0px;"><br>Tashi</a></li>
+                     <li><a href="abhiva.txt"><img src="assets/images/abhiva.jpg" alt="Abhiva" style="width:50px; height:50px; border:0px;"><br>Abhiva</a></li>
+                     <li><a href="min.txt"><img src="assets/images/min.jpg" alt="Minnesota" style="width:50px; height:50px; border:0px;"><br>Minnesota</a></li>
+                </ul>
+            </div>
                     
             <div>    
-                <form id="locations-form" style="padding-left:60%">
+                <form id="locations-form" style="padding-left:60%; margin-top:40px;">
                     <label for="locations-input" style="color:blue;">Add a Location:</label>
                     <input type="text" id="location-input">
         
@@ -104,10 +161,10 @@
                     <input id="add-locations" type="submit" value="Add A Location">
                 </form>
             </div> 
-            
+       
 
         </div>
-
+ 
         <div class="row" style="margin:0">
                 <div class="col-sm-8" style="background-color: lavender; margin:0;">
                         <div id="map">
@@ -120,9 +177,17 @@
 
                 <div class="col-sm-4" style="background-color:bisque; margin:0;">
                         <div id="info-view">
-                            <h2>Our International Team</h2>
+                            <h3 style="padding-top:20px;">Our Team</h3>
                             <hr>
-                            <p>Our team is clearly International.  Abhinav is from India. Gamme is from ???.  Pierre is from France.  Tashi is from Tibet.   </p>
+                            <p>Our team is clearly International:</p>
+                            <ul>
+                                <li>Abhinav is from India.</li>
+                                <li>Gamme is from a great country.</li>
+                                <li>Pierre is from France.</li>
+                                <li>Tashi is from Tibet.</li>
+                            </ul>
+                            <p></p>
+                            <p>That makes us very special!</p>
                             
                         </div>
 
