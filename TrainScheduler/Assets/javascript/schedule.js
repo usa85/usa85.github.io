@@ -14,6 +14,8 @@ function openPanel(evt, cityName) {
     evt.currentTarget.firstElementChild.className += " w3-border-red";
   }
 
+  // New comments
+
     // Initialize Firebase
   var config = {
     apiKey: "AIzaSyBSXnEmWy26xVuFw4bUbJ8BPVXDlUl_Qmg",
