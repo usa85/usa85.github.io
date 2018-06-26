@@ -1,0 +1,31 @@
+body{
+    background-color: black;
+}
+.jleft{
+    
+    float:left;
+    color: yellow;
+}
+
+.jright{
+    float: right;
+}
+
+.jcenter{
+    float: left;
+    padding:100px;
+
+}
+
+.jumbotron{
+    height:250px;
+    background-color: wheat;
+}
+
+.pictureRating{
+    color: yellow;
+}
+
+a{
+    color: yellow;
+}

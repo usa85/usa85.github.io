@@ -1,15 +1,15 @@
 $(document).ready(function() {
 //Array for searched topics to be added
-var topics = [];
+  var topics = [];
 
 	//Function with AJAX call to GIPHY; Q parameterc for API link set to search term, limit 10 results
   //Create div with respective still and animate image sources with "data-state", "data-still" and "data-animate" attributes
  	function display_topics() {
 
-	var x = $(this).data("search");
-	console.log(x);
+	var AnimalGroup = $(this).data("search");
+	console.log(AnimalGroup);
 
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + x + "&api_key=e6OFIzIJm8CK6O6aiWItgKxH4bKZTzjB&limit=10";
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + AnimalGroup + "&api_key=e6OFIzIJm8CK6O6aiWItgKxH4bKZTzjB&limit=25&rating=R";
 
 	console.log(queryURL);
 
@@ -27,7 +27,7 @@ var topics = [];
         	var defaultAnimatedSrc = results[i].images.fixed_height.url;
         	var staticSrc = results[i].images.fixed_height_still.url;
         	var topicsImage = $("<img>");
-        	var p = $("<p>").text("Rating: " + rating);
+          var p = $("<p>").text("Rating: " + rating);
 
         	topicsImage.attr("src", staticSrc);
         	topicsImage.addClass("_Giphy");
@@ -87,30 +87,3 @@ var topics = [];
 
 });
 
-
-
-//lindsay code
-
-
-$.ajax({
- url: queryURL,
- method: "GET"
-}).then(function(response) {
-    console.log(response);
-    var reactionDiv = $("#reactionsDiv");
-    var gifs = response.data;
-    console.log(gifs);
-
-  for (var i = 0; i < gifs.length; i++) {
-    var gif = $('<img>')
-    gif.attr("src", gifs[i].images.fixed_height_still.url);
-    gif.attr("state", "still");
-    gif.attr("still",gifs[i].images.fixed_height_still.url);
-    gif.attr("animate",gifs[i].images.fixed_height.url);
-    var rating = gifs[i].rating;  // changes rating with the gif (jag)
-    var p = $("<p>").text("Rating: " + rating);
-
-    reactionDiv.append(p);
-  };
-
-});

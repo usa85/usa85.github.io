@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GifTastic Assignment </title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Carrois+Gothic+SC" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body class="container">
+
+<div class="jumbotron" id="header">
+
+
+  <img src="assets/javascript/1.jpg">
+  <h1>Home of all the USELESS things on the Internet</h1>
+  <h4>Click the buttons to display GIPHYs of your favorite topics <br>Click the GIPHYs to pause and play<br>Search to add more buttons!</h4>
+</div>
+
+<form class="form-inline" id="theSearch">
+  <div class="form-group">
+    <label for="topicInput">Search for a topic </label>
+    <input type="text" id="topicInput">
+  </div>
+  <!-- Button triggers topics to be added -->
+  <input id="addtopics" type="submit" value="submit">
+</form>
+
+<div class="row">
+  <div class="container">
+    <div class="btn-group inline pull-left">
+      <button class="btn btn-primary" id="topics" data-search="Burgers"> Burgers</button>
+      <button class="btn btn-primary" id="topics" data-search="Big Dogs"> Dogs</button>
+      <button class="btn btn-primary" id="topics" data-search="fucking darth"> Silly Humans </button>
+      <button class="btn btn-primary" id="topics" data-search="Pigs ">Pigs</button>
+
+      <div id="myButtons"></div>
+    </div> <!--end of button group -->
+  </div> <!--end of container -->
+</div> <!--end of row -->
+
+
+<div class="row">
+  <div class="container">
+      <span><div id="gifArea"></div></span>
+  </div> <!--end of container -->
+</div> <!-- end of row  -->
+
+
+<script type="text/javascript" src="assets/javascript/app.js"</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</body>
+</html>
