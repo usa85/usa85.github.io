@@ -1,0 +1,171 @@
+
+
+.color-style .color-button,
+.color-style .color-button:hover,
+.color-style .color-button:focus {
+    background-color: #F35369;
+}
+.header .navbar-nav li.active a {
+    color: #F35369;
+}
+.header.shrink .navbar-nav li.active a {
+     color: #F35369;
+}
+
+.text .element{
+	color:#F35369;
+}
+.color-handle i{
+	color:#F35369;
+}
+.separator{
+
+  background: #F35369;
+}
+
+.separator:before, .separator:after{
+
+  background: #F35369;
+}
+.load-more > a {
+    background-color: #F35369;
+}
+.proggress {
+    background: #F35369!important;
+}
+.blog-img .blog-time{
+
+    background-color: #F35369;
+
+}
+.blog-text p i{
+   color: #F35369;
+}
+.blog .blog-read-more a:hover{
+  color: #F35369;
+}
+.portfolio-filter > li a {
+    border: 1px solid #F35369;
+
+}
+.portfolio-filter > li.active a, .portfolio-filter > li a:hover {
+
+    border: 1px solid #F35369;
+    background: #F35369;
+}
+.main-timeline .timeline:hover .timeline-icon:before{ background: #F35369; }
+.portfolio-description i{
+  color: #F35369 !important;
+}
+.main-timeline .timeline:hover .timeline-content{
+    border: 1px solid #F35369;
+}
+.main-timeline .timeline:hover .timeline-content:before{
+    background: #F35369;
+    border-color: #F35369;
+}
+.main-timeline .date{
+
+    color: #F35369;
+
+}
+.main-timeline .timeline:hover .title{ color: #F35369; }
+.counter-item i {
+    color: #F35369;
+
+}
+.testimonial-item.style-4 .review-txt>span{
+
+  color: #F35369;
+
+}
+.testimonial-thumb{
+
+  border:5px solid #F35369;
+
+}
+
+.portfolio-description i{
+	color: #F35369 !important;
+}
+.portfolio-style-2 .portfolio-description h4 a:hover, 
+.portfolio-style-2 .portfolio-cat a:hover {
+  color: #F35369 !important;
+}
+.portfolio-description i {
+  color: #fff !important;
+  background: #F35369 !important;
+
+}
+.portfolio-style-2 .portfolio-description h4 a:hover, 
+.portfolio-style-2 .portfolio-cat a:hover {
+  color: #F35369 !important;
+}
+.scroll-to-top{
+	background-color: #F35369 !important;
+}
+
+
+.box-single:hover .service-header i{
+	 border: 3px solid #F35369;
+   color: #F35369;
+}
+.single-testimonial .tes-image img{
+  box-shadow: 0 0 0 5px  #F35369;
+}
+.single-testimonial p.comp{
+  font-style: italic;
+  color: #F35369;
+  font-size: 14px;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #F35369;
+}
+#counter .single-counter{
+ color: #F35369;
+}
+.single-tag{
+  background-color: #F35369;
+}
+.contact-info i{
+  color: #F35369;
+  border: 3px solid #F35369;
+}
+.send-form-style input:focus{
+  border: 1px solid #F35369;
+
+}
+.send-form-style textarea:focus{
+    border: 1px solid #F35369;
+}
+.load-more button{
+  background-color:#F35369;
+  color: #fff;
+}
+.comment-img img{
+ border:4px solid #F35369;
+}
+.cm-reply:hover{
+  color: #F35369;
+}
+.search-form input{
+
+  border:2px solid #F35369;
+
+}
+.search-form input:focus{
+  border-color: #F35369;
+}
+.search-form button{
+  background-color: #F35369;
+  border:2px solid #F35369;
+}
+.search-form button:hover,.search-form button:focus{
+  color: #cccccc;
+  height: 50px;
+  width: 50px;
+  box-shadow: 2px 2px 5px #ccc;
+  background-color: #F35369;
+  border:2px solid #F35369;
+  color: #fff;
+}

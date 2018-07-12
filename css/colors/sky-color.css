@@ -1,0 +1,171 @@
+
+.color-style .color-button,
+.color-style .color-button:hover,
+.color-style .color-button:focus {
+    background-color: #00acc1;
+}
+.header .navbar-nav li.active a {
+    color: #00acc1;
+}
+.header.shrink .navbar-nav li.active a {
+     color: #00acc1;
+}
+
+.text .element{
+	color:#00acc1;
+}
+.color-handle i{
+	color:#00acc1;
+}
+.separator{
+
+  background: #00acc1;
+}
+
+.separator:before, .separator:after{
+
+  background: #00acc1;
+}
+.load-more > a {
+    background-color: #00acc1;
+}
+.proggress {
+    background: #00acc1!important;
+}
+.blog-img .blog-time{
+
+    background-color: #00acc1;
+
+}
+.blog-text p i{
+   color: #00acc1;
+}
+.blog .blog-read-more a:hover{
+  color: #00acc1;
+}
+.portfolio-filter > li a {
+    border: 1px solid #00acc1;
+
+}
+.portfolio-filter > li.active a, .portfolio-filter > li a:hover {
+
+    border: 1px solid #00acc1;
+    background: #00acc1;
+}
+.main-timeline .timeline:hover .timeline-icon:before{ background: #00acc1; }
+.portfolio-description i{
+  color: #00acc1 !important;
+}
+.main-timeline .timeline:hover .timeline-content{
+    border: 1px solid #00acc1;
+}
+.main-timeline .timeline:hover .timeline-content:before{
+    background: #00acc1;
+    border-color: #00acc1;
+}
+.main-timeline .date{
+
+    color: #00acc1;
+
+}
+.main-timeline .timeline:hover .title{ color: #00acc1; }
+.counter-item i {
+    color: #00acc1;
+
+}
+.testimonial-item.style-4 .review-txt>span{
+
+  color: #00acc1;
+
+}
+.testimonial-thumb{
+
+  border:5px solid #00acc1;
+
+}
+
+.portfolio-description i{
+	color: #00acc1 !important;
+}
+.portfolio-style-2 .portfolio-description h4 a:hover, 
+.portfolio-style-2 .portfolio-cat a:hover {
+  color: #00acc1 !important;
+}
+.portfolio-description i {
+  color: #fff !important;
+  background: #00acc1 !important;
+
+}
+.portfolio-style-2 .portfolio-description h4 a:hover, 
+.portfolio-style-2 .portfolio-cat a:hover {
+  color: #00acc1 !important;
+}
+.scroll-to-top{
+	background-color: #00acc1 !important;
+}
+
+.box-single:hover .service-header i{
+	 border: 3px solid #00acc1;
+   color: #00acc1;
+}
+.single-testimonial .tes-image img{
+  box-shadow: 0 0 0 5px  #00acc1;
+}
+.single-testimonial p.comp{
+  font-style: italic;
+  color: #00acc1;
+  font-size: 14px;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #00acc1;
+}
+#counter .single-counter{
+ color: #00acc1;
+}
+.single-tag{
+  background-color: #00acc1;
+}
+.contact-info i{
+  color: #00acc1;
+  border: 3px solid #00acc1;
+}
+.send-form-style input:focus{
+  border: 1px solid #00acc1;
+
+}
+.send-form-style textarea:focus{
+    border: 1px solid #00acc1;
+}
+.load-more button{
+  background-color:#00acc1;
+  color: #fff;
+}
+.comment-img img{
+ border:4px solid #00acc1;
+}
+.cm-reply:hover{
+  color: #00acc1;
+}
+.search-form input{
+
+  border:2px solid #00acc1;
+
+}
+.search-form input:focus{
+  border-color: #00acc1;
+
+
+}
+.search-form button{
+  background-color: #00acc1;
+  border:2px solid #00acc1;
+}
+.search-form button:hover,.search-form button:focus{
+  color: #cccccc;
+  height: 50px;
+  width: 50px;
+  box-shadow: 2px 2px 5px #ccc;
+  background-color: #00acc1;
+  border:2px solid #00acc1;
+  color: #fff;
+}
