@@ -143,7 +143,7 @@ TABLE OF CONTENTS:
     var element = $(".element");
     $(function() {
       element.typed({
-        strings: ["a Web Designer.", "a Full Stack Developer.", "a Data Analyst.", " a Geographic Information System Specialist.", "a Project Manager.", " French.", "American." ],
+        strings: ["a Web Designer.", "a Full Stack Developer.", "a Data Analyst.", " a Geographic Information System Specialist.", " a Business Faculty", "a Project Manager." ],
         typeSpeed: 50,
         loop: true,
       });
