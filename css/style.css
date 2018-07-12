@@ -403,7 +403,7 @@ label {
   Background image set
 ---------------------------------------*/
 .home-bg{
-	background: rgba(255,255,255,0) url("../image/banner/meFirstbw.jpg"); /*Change the image here*/
+	background: rgba(255,255,255,0) url("../image/banner/mefirstbw2.jpg"); /*Change the image here*/
 	background-attachment: fixed;
 	background-clip: initial;
 	background-color: rgba(255,255,255,0);
